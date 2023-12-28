@@ -1,13 +1,13 @@
 .bgColor{
-    background-color: #F3FDE8;
+    background-color: #f9f9e0;
 }
 
 .subtitle{
-    color: #a8df8e;
+    color: #bacdd7;
 }
 
 .peach{
-    color: #FFBFBF;
+    color: #FFBCBC;
 }
 
 .babypink{
@@ -16,4 +16,19 @@
 
 .barbiepink{
  color: #FF90BC;
+}
+
+.intro-style {
+    display: inline
+}
+
+
+p {
+    text-align: center;
+}
+
+@media (max-width: 680px){
+    .project-img{
+        display: inline-block;
+    }
 }
