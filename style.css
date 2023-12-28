@@ -19,7 +19,8 @@
 }
 
 .intro-style {
-    display: inline
+    display: flex;
+    gap: 10px;
 }
 
 div {
