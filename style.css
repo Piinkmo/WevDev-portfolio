@@ -22,7 +22,9 @@
     display: inline
 }
 
-
+div {
+    display: inline-block;
+}
 p {
     text-align: center;
 }
