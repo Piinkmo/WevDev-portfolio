@@ -1,2 +1,3 @@
-# Html-portfolio
-For personal HTML learning purposes only.
+# Web Learning portfolio
+## Wev Devlopment Bootcamp. 
+for personal learning only.
