@@ -150,6 +150,53 @@ Request Vocab:</li>
     <img src="./pics/Back_6.0.png" width = "400"></a>
     <p style="font-size: 16px; text-align: left; ">快要8月了，每天都保持着学习的动力，只要进步一点点都很不错。</p>
 
+<h2><a class = "barbiepink">Creating the Delete Route(Aug 1, 2024) </h2></a>
+    
+
+         <!-- 代码框开始 -->
+    <div class="code-container">
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
+        <pre><code id="code">//7. DELETE Specific joke
+app.delete("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const searchIndex = jokes.findIndex((joke) => joke.id == id);
+  if (searchIndex > -1) {
+    jokes.splice(searchIndex, 1);
+    res.sendStatus(200);
+  } else {
+    res
+    .status(404)
+    .json({error: `Joke with id: ${id} not found. No jokes were deleted.`});
+  }
+});
+//8. DELETE All jokes
+app.delete("/all", (req, res) => {
+  const userKey = req.query.key;
+  if (userKey === masterKey) {
+    jokes= [];
+    res.sendStatus(200);
+  } else {
+    res
+    .status(404)
+    .json({error: `You are not authorized to perform this action.`});
+  }
+});</code></pre>
+    </div>
+    <!-- 代码框结束 -->
+
+    <script>
+        function copyCode() {
+            const codeElement = document.getElementById('code');
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges(); // 清除之前的选取范围
+            window.getSelection().addRange(range); // 选取代码
+            document.execCommand('copy'); // 执行复制命令
+            window.getSelection().removeAllRanges(); // 取消选取
+            alert('Code copied to clipboard!');
+        }
+    </script>
+
 
 
 
