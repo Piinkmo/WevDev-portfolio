@@ -197,8 +197,30 @@ app.delete("/all", (req, res) => {
         }
     </script>
 
+    <h2><a class = "barbiepink">SQL Brief Review(Aug 2 29, 2024)</h2></a>
+    <li>INNER JOIN</li>
+    <p style="font-size: 16px; text-align: left; "><b>Definition:</b> Returns records that have matching values in both tables.</p>
+    <p style="font-size: 16px; text-align: left; "><b>Usage:</b> When you want to select records that have corresponding records in both tables.</p>
 
+    <li>2. LEFT JOIN (or LEFT OUTER JOIN)</li>
+<p style="font-size: 16px; text-align: left; "><b>Definition: </b>Returns all records from the left table, and the matched records from the right table. The result is NULL from the right side if there is no match.</p>
+<p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you want to select all records from the left table, regardless of whether they have matches in the right table.</p>
 
+    <li>3. RIGHT JOIN (or RIGHT OUTER JOIN)</li>
+<p style="font-size: 16px; text-align: left; "><b>Definition: </b>Returns all records from the right table, and the matched records from the left table. The result is NULL from the left side when there is no match.</p>
+<p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you want to select all records from the right table, regardless of whether they have matches in the left table.</p>
+
+    <li>4. FULL JOIN (or FULL OUTER JOIN)</li>
+<p style="font-size: 16px; text-align: left; "><b>Definition: </b>Returns all records when there is a match in either left or right table. The result is NULL on the side that does not have a match.</p>
+<p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you want to select all records from both tables, with matching records where available.</p>
+
+<li>5. CROSS JOIN</li>
+<p style="font-size: 16px; text-align: left; "><b>Definition: </b>Returns the Cartesian product of both tables, meaning it returns all possible combinations of rows from the tables.</p>
+<p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you need all possible combinations of records from both tables.</p>
+
+<li>6. SELF JOIN</li>
+<p style="font-size: 16px; text-align: left; "><b>Definition: </b>Joins a table to itself, useful for hierarchical data or comparing rows within the same table.</p>
+<p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you need to compare rows in the same table.</p>
 
 
     
