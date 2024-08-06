@@ -223,8 +223,50 @@ app.delete("/all", (req, res) => {
 <p style="font-size: 16px; text-align: left; "><b>Usage: </b>When you need to compare rows in the same table.</p>
 
 <h2><a class = "barbiepink">PostgreSQL Database(Aug 5, 2024)</h2>
-    <img src="./pics/pg_1.png" width = "400"></a>
+    <img src="./pics/pg_1.png" width = "400">
+    <img src="./pics/pg_2.png" width = "400"></a>
     <p style = "font-size: 16px; text-align: left;">Hosted on localhost:3000</p>
+    <!-- 代码框开始 -->
+    <div class="code-container">
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
+        <pre><code id="code">/import pg from 'pg';
+
+const db = new pg.Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'world',
+  password: 'Roxanne0120!',
+  port: 5432
+});
+
+db.connect();
+
+const app = express();
+const port = 3000;
+
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
+  }
+  db.end();
+});</code></pre>
+    </div>
+    <!-- 代码框结束 -->
+
+    <script>
+        function copyCode() {
+            const codeElement = document.getElementById('code');
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges(); // 清除之前的选取范围
+            window.getSelection().addRange(range); // 选取代码
+            document.execCommand('copy'); // 执行复制命令
+            window.getSelection().removeAllRanges(); // 取消选取
+            alert('Code copied to clipboard!');
+        }
+    </script>
     
     
 <hr />
